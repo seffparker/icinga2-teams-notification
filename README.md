@@ -21,5 +21,5 @@ This is an modified version of https://github.com/seffparker/icinga2-rich-slack-
 1. Validate the Icinga2 configuration and restart the service.
 
 # Advanced Configuration
-1. The notification color can be changed in the variable `vars.teams_notifications_color` using HEX notation.
-1. Notifications for DOWNTIME alerts are disabled by default. It can be enabled in the variable `types`
+1. The notification color can be changed in the array variable `vars.teams_notifications_color` using HEX notation.
+1. Notifications for Scheduled DOWNTIME alerts are disabled by default. It can be enabled in the variable `types`
