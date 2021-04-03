@@ -16,9 +16,11 @@ This is an modified version of https://github.com/seffparker/icinga2-rich-slack-
 1. When the notification for a host is enabled, it will be inherited to all of its services checks, unless disabled for the specific service(s).
 
 # Installation and Basic Configuration
-1. Copy the two `teams-notification-*` confs to `/etc/icinga2/conf.d/` directory and configure the existing host or service configuration like the provided one in `sample.conf`
+1. Copy the two `teams-notification-*` confs to `/etc/icinga2/conf.d/` directory
 1. Modify the `vars.teams_notifications_icinga2_base_url` in `teams-notifications-configuration.conf` with your IcingaWeb2 Base URL. This is to jump to Alert Dashboard right from Teams channel.
-1. Validate the Icinga2 configuration and restart the service.
+1. Configure the existing host or service configuration like the provided one in `sample.conf`
+3. Get the `webhook_url` of the Teams Channel and add in to the `object User` section of required notification user(s). [Read more here](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook)
+4. Validate the Icinga2 configuration and restart the service.
 
 # Advanced Configuration
 1. The notification color can be changed in the array variable `vars.teams_notifications_color` using HEX notation.
